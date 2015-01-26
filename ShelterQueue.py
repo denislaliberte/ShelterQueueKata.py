@@ -15,14 +15,7 @@ class ShelterQueue:
     return temp
 
   def dequeueDog(self):
-    i =0 
-    while(self.item[i]['type'] !="dog"  and i<= self.count ):
-      i += 1
-    if self.item[i]['type'] =="dog":
-      temp = self.item[i]
-      self.item.pop(i)
-      self.count -= 1
-      return temp
+    return self.dequeueByType('dog')
 
   def dequeueCat(self):
     return self.dequeueByType('cat')
