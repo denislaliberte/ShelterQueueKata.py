@@ -1,4 +1,4 @@
-# Binary Search Kata
+# Shelter queue kata
 
 Kata objective
 
@@ -10,5 +10,8 @@ specific animal they would like. Create the data structures to maintain this sys
 and implement operations such as enqueue, dequeueAny, dequeueDog and
 dequeueCat.You may use the built-in LinkedList data structure
 
-
 Probleme defined in Cracking the coding interview page 81
+
+Python list already implements queue operation, here i reemplent it juste for fun.
+
+http://rosettacode.org/wiki/Queue/Definition#Python

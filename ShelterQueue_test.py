@@ -6,6 +6,7 @@ class ShelterQueue_test(unittest.TestCase):
     self.queue = ShelterQueue()
   def test_empty_queue(self):
     self.assertEqual(self.queue.empty(),True)
+    self.assertEqual(self.queue.dequeueAny(),None)
 
   def test_one_item(self):
     self.queue.enqueue(1)
@@ -31,6 +32,7 @@ class ShelterQueue_test(unittest.TestCase):
     self.queue.enqueue({"type":"dog","name":"fido"})
     self.queue.enqueue({"type":"cat","name":"larry"})
     self.assertEqual(self.queue.dequeueCat(),{"type":"cat","name":"larry"})
+    self.assertEqual(self.queue.dequeueCat(),None)
     self.assertEqual(self.queue.dequeueAny(),{"type":"dog","name":"fido"})
 
 
