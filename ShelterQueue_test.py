@@ -27,5 +27,6 @@ class ShelterQueue_test(unittest.TestCase):
     queue.enqueue({"type":"cat","name":"larry"})
     queue.enqueue({"type":"dog","name":"fido"})
     self.assertEqual(queue.dequeueDog(),{"type":"dog","name":"fido"})
+    self.assertEqual(queue.dequeueAny(),{"type":"cat","name":"larry"})
 
 
