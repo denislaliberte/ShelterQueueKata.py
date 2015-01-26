@@ -5,3 +5,6 @@ class ShelterQueue:
 
   def enqueue(self,item):
     self.count += 1
+
+  def dequeueAny(self):
+    self.count -= 1

@@ -10,4 +10,8 @@ class ShelterQueue_test(unittest.TestCase):
     queue = ShelterQueue()
     queue.enqueue(1)
     self.assertEqual(queue.empty(),False)
+    queue.dequeueAny()
+    self.assertEqual(queue.empty(),True)
+
+
 
