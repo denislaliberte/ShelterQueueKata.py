@@ -9,23 +9,18 @@ class ShelterQueue:
     self.count += 1
 
   def dequeueAny(self):
-    if self.empty():
-      return None
-    self.count -= 1
-    temp = self.item[0]
-    self.item.pop(0)
-    return temp
+    return self.dequeueByType(['dog','cat'])
 
   def dequeueDog(self):
-    return self.dequeueByType('dog')
+    return self.dequeueByType(['dog'])
 
   def dequeueCat(self):
-    return self.dequeueByType('cat')
+    return self.dequeueByType(['cat'])
 
   def dequeueByType(self,animal_type):
     i =0 
     while( i< self.count):
-      if (self.item[i]['type'] == animal_type):
+      if (self.item[i]['type'] in animal_type):
         temp = self.item[i]
         self.item.pop(i)
         self.count -= 1
