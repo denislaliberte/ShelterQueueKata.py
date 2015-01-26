@@ -24,4 +24,12 @@ class ShelterQueue:
       self.count -= 1
       return temp
 
-
+  def dequeueCat(self):
+    i =0 
+    while(self.item[i]['type'] !="cat"  and i<= self.count ):
+      i += 1
+    if self.item[i]['type'] =="cat":
+      temp = self.item[i]
+      self.item.pop(i)
+      self.count -= 1
+      return temp
